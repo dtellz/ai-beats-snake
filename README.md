@@ -11,8 +11,12 @@ In this Python Reinforcement Learning Project I build an AI and then teach it to
 Key steps:
 
 - Implement the Snake game.
-- Implement the agent that controls the game.
+- Implement the Agent that controls the game.
 - Implement the neural network to predict the moves and train it.
+
+TODO:
+    - Avoid the AI to trap itself
+    - Don't let her get in a loop for too long
 
 ## Dependencies
 
