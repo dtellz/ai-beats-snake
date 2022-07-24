@@ -6,7 +6,7 @@
 
 # AI Learns To Play Snake! Reinforcement Learning With PyTorch and Pygame
 
-In this Python Reinforcement Learning Project series I teach an AI to play Snake! I build everything using Pygame and PyTorch. The tutorial consists of 4 parts:
+In this Python Reinforcement Learning Project I build an AI and then teach it to play Snake! I build everything using Pygame and PyTorch.
 
 Key steps:
 
