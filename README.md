@@ -24,8 +24,10 @@ Key steps:
 </p>
 
 TODO:
-    - Avoid the AI to trap itself
-    - Don't let her get in a loop for too long
+
+- Avoid the AI to trap itself
+- Don't let her get in a loop for too long
+- Increase game speed to increase training speed
 
 ## Dependencies
 
