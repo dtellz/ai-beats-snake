@@ -23,6 +23,17 @@ Key steps:
     <img src=assets/stats/v1_555_games_data_plot.png width='450'/>
 </p>
 
+## After 1000+ games on V1
+
+Model haven't beat its own record but it gets better averaged results every game
+
+<p align='center'>
+    <img src=assets/stats/v1_1000_games.png width='350'/>
+</p>
+<p align='center'>
+    <img src=assets/stats/v1_1000_games_data_plot.png width='450'/>
+</p>
+
 TODO:
 
 - Avoid the AI to trap itself
