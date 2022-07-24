@@ -29,14 +29,6 @@ TODO:
 - Don't let her get in a loop for too long
 - Increase game speed to increase training speed
 
-## After 600+ games the AI starts to show off impresive skills
-
-<video width="320" height="240" controls>
-  <source src="assets/stats/vid1.mov" type="video/mp4">
-</video>
-
-![](assets/stats/vid1.mov)
-
 ## Dependencies
 
 I have used Anaconda to create the python env
