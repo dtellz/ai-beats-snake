@@ -35,6 +35,8 @@ TODO:
   <source src="assets/stats/vid1.mov" type="video/mp4">
 </video>
 
+![](assets/stats/vid1.mov)
+
 ## Dependencies
 
 I have used Anaconda to create the python env
