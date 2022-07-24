@@ -33,3 +33,9 @@ I used pyTorch to create the model
 ```
 pip install torch torchvision
 ```
+
+Extra deps:
+
+```
+pip install matplotlib ipython
+```
