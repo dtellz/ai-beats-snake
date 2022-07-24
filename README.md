@@ -14,6 +14,15 @@ Key steps:
 - Implement the Agent that controls the game.
 - Implement the neural network to predict the moves and train it.
 
+## After 500+ games on V1
+
+<p align='center'>
+    <img src=assets/stats/v1_555_games.png width='150'/>
+</p>
+<p align='center'>
+    <img src=assets/stats/v1_555_games_data_plot.png width='150'/>
+</p>
+
 TODO:
     - Avoid the AI to trap itself
     - Don't let her get in a loop for too long
