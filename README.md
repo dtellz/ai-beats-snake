@@ -17,10 +17,10 @@ Key steps:
 ## After 500+ games on V1
 
 <p align='center'>
-    <img src=assets/stats/v1_555_games.png width='150'/>
+    <img src=assets/stats/v1_555_games.png width='350'/>
 </p>
 <p align='center'>
-    <img src=assets/stats/v1_555_games_data_plot.png width='150'/>
+    <img src=assets/stats/v1_555_games_data_plot.png width='350'/>
 </p>
 
 TODO:
