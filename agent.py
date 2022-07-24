@@ -15,16 +15,18 @@ class Agent:
         self.epsilon = 0 # controls randomnewss
         self.gamma = 0 # discount rate
         self.memory = deque(maxlen=MAX_MEMORY) # popleft() callled when max mem is reached
-
+        self.model = None
+        self.trainer = None
         # TODO: model, trainer
 
     def get_state(self, game):
         head = game.snake[0]
-        point_l = Point(head.x - 20, head.y)
+        point_l = Point(head.x - 20, head.y) # 20 is the size of a block size in the game
         point_r = Point(head.x + 20, head.y)
         point_u = Point(head.x, head.y - 20)
         point_d = Point(head.x, head.y + 20)
         
+        # boolean to detect the direction
         dir_l = game.direction == Direction.LEFT
         dir_r = game.direction == Direction.RIGHT
         dir_u = game.direction == Direction.UP
@@ -62,17 +64,41 @@ class Agent:
             game.food.y > game.head.y  # food down
             ]
 
+        return np.array(state, dtype=int)
+
     def remember(self, state, action, reward, next_state, done):
-        pass
+        self.memory.append((state, action, reward, next_state, done)) # popleft if MAX_MEMORY is reached
 
     def train_long_memory(self):
-        pass
+        if len(self.memory) > BATCH_SIZE:
+            mini_sample = random.sample(self.memory, BATCH_SIZE) # return a list of tuples
+        else:
+            mini_sample = self.memory
+
+        states, actions, rewards, next_states, dones = zip(*mini_sample) # https://docs.python.org/3/library/functions.html#zip
+
+        self.trainer.train_step(states, actions, rewards, next_states, dones)
 
     def train_short_memory(self, state, action, reward, next_state, done):
-        pass
+        self.trainer.train_step(state, action, reward, next_state, done)
 
     def get_action(self, state):
-        pass
+        # random moves: tradeoff exploration / exploitation
+        self.epsilon = 80 - self.n_games
+        final_move = [0,0,0]
+        #generate a random move:
+        if random.randint(0, 200) < self.epsilon:
+            move = random.randint(0, 2)
+            final_move[move] = 1
+        else:
+            #get a move based in our model
+            state0 = torch.tensor(state, dtype=torch.float)
+            prediction = self.model.predict(state0)
+            move = torch.argmax(prediction).item()
+            final_move[move] = 1
+        
+        return final_move
+
 
 def train():
     plot_scores = []
